@@ -15,6 +15,7 @@ permissions:
 
 env:
   TERRAFORM_VERSION: 1.14.0
+  TERRAFORM_WORKDIR: terraform
 
 jobs:
   # Build and Deploy Job
@@ -45,10 +46,18 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+        working-directory: ${{ env.TERRAFORM_WORKDIR }}
 
       - name: Terraform Plan
         run: terraform plan
+        working-directory: ${{ env.TERRAFORM_WORKDIR }}
 
       - name: Terraform Apply
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: terraform apply -auto-approve tfplan
+        run: terraform apply -auto-approve
+        working-directory: ${{ env.TERRAFORM_WORKDIR }}
+
+      - name: Terraform Destroy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: terraform destroy -auto-approve
+        working-directory: ${{ env.TERRAFORM_WORKDIR }}
