@@ -1,7 +1,9 @@
 # Variable Definition
-subscription_id = "542a660f-0dc9-4007-9f1b-7fdd4b11da13"
-tenant_id       = "82394dbd-97a0-4662-b529-166bb2996f3a"
-location        = "UK South"
+
+# Subscription and Tenant Details to be passed thru terraform.auto.tfvars
+# bld_subscription_id = ""
+# tenant_id           = ""
+location = "UK South"
 
 rg_name = "oneanupam-bld-rg-20"
 

@@ -1,22 +1,22 @@
-output "rg_id" {
-  value       = azurerm_resource_group.rg.id
+output "bld_rg_id" {
+  value       = azurerm_resource_group.bld_rg.id
   description = "the id of the created resource group"
 }
 
-output "vnet_id" {
-  value       = azurerm_virtual_network.vnet.id
+output "bld_vnet_id" {
+  value       = azurerm_virtual_network.bld_vnet.id
   description = "the id of the created virtual network"
 }
 
-output "snet_details" {
-  value       = azurerm_subnet.snet
+output "bld_snet_details" {
+  value       = azurerm_subnet.bld_snet
   description = "the output of the created subnets"
 }
 
-output "snet_ids" {
+output "bld_snet_ids" {
   description = "the id of the created subnets"
   value = [
-    for key, value in azurerm_subnet.snet :
+    for key, value in azurerm_subnet.bld_snet :
     value.id
   ]
 }
