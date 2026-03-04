@@ -1,8 +1,14 @@
 # Authentication Specific Variables
-variable "subscription_id" {
+variable "bld_subscription_id" {
   type        = string
-  description = "the id of the subscription"
+  description = "the id of the bld subscription"
 }
+
+variable "prd_subscription_id" {
+  type        = string
+  description = "the id of the prd subscription"
+}
+
 variable "tenant_id" {
   type        = string
   description = "the tenant id of the subscription"
