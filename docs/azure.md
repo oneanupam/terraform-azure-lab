@@ -9,9 +9,11 @@ This repository contains a curated list of essential `Az-CLI` commands for runni
 az version # Check the installed az cli version
 az upgrade # To upgrade the az cli version
 ansible-doc dnf # Get documentation of a particular module
+az login # to login to azure account
 
 # 2. Azure Ops
-
+az account list # to display one or more Subscriptions - with the id field being the subscription_id field.
+az account set --subscription="20000000-0000-0000-0000-000000000000" # to set the subscription to use.
 ```
 
 ## 📌 How to Contribute
