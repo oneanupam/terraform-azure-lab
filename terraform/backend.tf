@@ -1,5 +1,4 @@
 # Configure Terraform Backend for Azure Provider
-
 terraform {
   backend "azurerm" {
     resource_group_name  = "oneanupam-rg-bld-eastus-01"

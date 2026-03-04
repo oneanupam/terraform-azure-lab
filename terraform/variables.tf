@@ -41,6 +41,21 @@ variable "snet_details" {
   description = "the map of the subnet details"
 }
 
+variable "kv_name" {
+  type        = string
+  description = "the name of the key vault"
+}
+
+variable "windows_vm_details" {
+  type        = any
+  description = "the map of the windows vm details"
+}
+
+variable "storage_account_name" {
+  type        = string
+  description = "the name of the storage account"
+}
+
 # variable "nsg_name" {}
 # variable "nsg_rules" {}
 # variable "avset_names" {}
@@ -51,14 +66,3 @@ variable "snet_details" {
 # # Variable Declaration - Database Resources
 # variable "sqlsvr_name" {}
 # variable "epool_name" {}
-
-# # Variable Declaration - Storage Resources
-# variable "sa_name" {
-#   description = "Name of the storage account"
-#   validation {
-#     condition = (
-#       length(var.sa_name) >= 3 && length(var.sa_name) <= 24 && can(regex("^[a-z0-9]*$", var.sa_name))
-#     )
-#     error_message = "Storage account name can only consist of lowercase letters and numbers, and must be between 3 and 24 characters long."
-#   }
-# }
