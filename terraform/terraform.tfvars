@@ -27,6 +27,27 @@ snet_details = {
   }
 }
 
+kv_name = "oneanupam-bld-kv-20"
+windows_vm_details = {
+  vm-01 = {
+    name           = "vm-01"
+    admin_username = "azureuser"
+    size           = "Standard_DS1_v2"
+  },
+  vm-02 = {
+    name           = "vm-02"
+    admin_username = "azureuser"
+    size           = "Standard_DS1_v2"
+  },
+  vm-03 = {
+    name           = "vm-03"
+    admin_username = "azureuser"
+    size           = "Standard_DS1_v2"
+  }
+}
+
+storage_account_name = "oneanupamsa20"
+
 # nsg_name = ["FC-TST-WEB-SNET-NSG", "FC-TST-APP-SNET-NSG", "FC-TST-DBS-SNET-NSG"]
 # nsg_rules = [
 #   { "rule_name" = "Rule-01", "priority" = "100", "ingress_port" = "80" },
@@ -40,6 +61,3 @@ snet_details = {
 # # Variable Definition - Database Resources
 # sqlsvr_name = "fc-tst-sqlsvr-01"
 # epool_name  = "fc-tst-epool-01"
-
-# # Variable Definition - Storage Resources
-# sa_name = "fctstsa01s"
