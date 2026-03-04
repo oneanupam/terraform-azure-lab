@@ -1,10 +1,10 @@
 # Configure Terraform Backend for Azure Provider
 
-#terraform {
-#  backend "azurerm" {
-#    resource_group_name  = "Graveyard-RG"
-#    storage_account_name = "bctstsa01"
-#    container_name       = "tfstate"
-#    key                  = "sbx.terraform.tfstate"
-#  }
-#}
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "oneanupam-rg-bld-eastus-01"
+    storage_account_name = "oneanupambldsa01"
+    container_name       = "tfstates"
+    key                  = "bld.terraform.tfstate"
+  }
+}
